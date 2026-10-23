@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>déjà brew</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-stage="intro">
+<div id="stage" aria-hidden="true"></div>
+<div class="brand">déjà brew</div>
+<section class="card">
+  <h1>déjà brew</h1>
+  <p>A small café between yesterday and tomorrow. Momo is waving from the doorway. Come on in.</p>
+  <button class="btn" id="enter">Start exploring</button>
+</section>
+<div id="joy"><i></i></div>
+<div id="bubble" role="status"><b id="nm">Momo</b><span id="say"></span><div class="chips" id="chips"></div></div>
+<div class="dock">
+  <button class="btn" id="toKiosk">Order at the kiosk</button>
+  <div class="hint">Drag to look. Walk with W A S D or the arrow keys (on touch, hold the lower left). Tap Momo, Rosie or Clem to chat.</div>
+</div>
+<div id="kiosk" role="dialog" aria-label="Order kiosk">
+  <div class="screen" id="screen">
+    <header><h2>What can we brew for you?</h2><button class="btn ghost" id="back">Back to the café</button></header>
+    <div id="tabs" role="tablist"></div>
+    <div class="body">
+      <div id="menu"></div>
+      <aside id="cart">
+        <h3>Your tray</h3><ul id="lines"></ul>
+        <div class="total"><span>Total</span><span id="total">₱0</span></div>
+        <input id="name" placeholder="Name for the order" maxlength="20" aria-label="Name for the order">
+        <button class="btn" id="place" disabled>Place order</button>
+      </aside>
+    </div>
+    <div id="done"><div class="big" id="num">#000</div><h2>Your order is brewing</h2><p id="doneMsg" style="max-width:420px;line-height:1.6"></p><button class="btn" id="again">Start a new order</button></div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
